@@ -6,17 +6,22 @@ public class Path : MonoBehaviour {
 
 	public GameObject path0;
 	public GameObject path1;
+	public float minSpeed;
+	public float maxSpeed;
 
 	public float speed;
 
 	void Start () 
 	{
+		minSpeed = 5f;
+		maxSpeed = 20f;
 		speed = 10;
 	}
 	
 	void Update () 
 	{
-		MovePaths ();	
+		MovePaths ();
+		AcceleratePaths ();
 	}
 
 	void MovePaths()
@@ -32,5 +37,19 @@ public class Path : MonoBehaviour {
 		{
 			path1.transform.localPosition = new Vector3 (path1.transform.localPosition.x, 4.8f, path1.transform.localPosition.z);
 		}
+	}
+
+	void AcceleratePaths ()
+	{
+		if (Input.GetKey(KeyCode.W))
+		{
+			speed += 0.1f;
+		}
+		if (Input.GetKey(KeyCode.S))
+		{
+			speed -= 0.1f;
+		}
+
+		speed = Mathf.Clamp (speed, minSpeed, maxSpeed);
 	}
 }
