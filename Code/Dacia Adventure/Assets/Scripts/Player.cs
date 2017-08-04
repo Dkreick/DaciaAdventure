@@ -44,13 +44,4 @@ public class Player : MonoBehaviour {
 		clampedPosition.y = Mathf.Clamp(transform.position.y, -4f, 3.85f);
 		transform.position = clampedPosition;
 	}
-
-	void OnCollisionEnter (Collision col)
-	{
-		if(col.gameObject.tag == "Enemy")
-		{
-			Debug.Log ("CHOCO!");
-			//Destroy(col.gameObject);
-		}
-	}
 }
