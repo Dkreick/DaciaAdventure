@@ -355,18 +355,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\damian.kreick\Desktop\DaciaAdventure\Code\Dacia Adventure
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 06260000
-    m_LastClickedID: 9734
+    m_SelectedIDs: f2250000
+    m_LastClickedID: 9714
     m_ExpandedIDs: 00000000f225000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -420,10 +420,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 60260000
+    m_SelectedInstanceIDs: 60260000542600001c2600005a2600002e260000
     m_LastClickedInstanceID: 9824
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c62300005c260000d830000064260000023e00005e26000000000000f4250000
+    m_ExpandedInstanceIDs: c62300005c260000d830000064260000023e00005e26000000000000f4250000f6250000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -511,9 +511,9 @@ MonoBehaviour:
     height: 468
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 202b0000
-    m_LastClickedID: 11040
-    m_ExpandedIDs: 1458ffff1afcffff0000000034260000f42a0000
+    m_SelectedIDs: 60260000
+    m_LastClickedID: 9824
+    m_ExpandedIDs: 18fcffff00000000342600003a260000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -568,9 +568,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.3413916, y: 6.660908, z: 0}
+    m_Target: {x: 0.38167924, y: 1.3376893, z: 0}
     speed: 2
-    m_Value: {x: 1.3413916, y: 6.660908, z: 0}
+    m_Value: {x: 0.38167924, y: 1.3376893, z: 0}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -597,9 +597,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 10.071847
+    m_Target: 15.079724
     speed: 2
-    m_Value: 10.071847
+    m_Value: 15.079724
   m_Ortho:
     m_Target: 1
     speed: 2

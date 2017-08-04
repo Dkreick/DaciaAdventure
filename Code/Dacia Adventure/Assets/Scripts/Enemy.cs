@@ -28,19 +28,6 @@ public class Enemy : MonoBehaviour {
 		{
 			SpawnEnemy ();
 			timeToSpawn = Random.Range (minTimeToSpawn, maxTimeToSpawn);;
-			Debug.Log ("SPAWNEO ALGO!");
-		}
-	}
-
-	void SpawnEnemy()
-	{
-		for (int i = 0; i < enemies.Length; i++) 
-		{
-			if (enemies[i].activeSelf == false) 
-			{
-				enemies[i].SetActive (true);
-				return;
-			}
 		}
 	}
 
@@ -57,6 +44,20 @@ public class Enemy : MonoBehaviour {
 			{
 				enemies[i].transform.position = new Vector3 (Random.Range (-1.7f, 1.7f), 8f, enemies[i].transform.localPosition.z);
 				enemies[i].SetActive (false);
+			}
+		}
+	}
+
+	void SpawnEnemy()
+	{
+		for (int i = 0; i < enemies.Length; i++) 
+		{
+			if (enemies[i].activeSelf == false) 
+			{
+				enemies[i].SetActive (true);
+				Color randomColor = new Color( Random.value, Random.value, Random.value, 1.0f);
+				enemies[i].GetComponent<Renderer> ().material.color = randomColor;
+				return;
 			}
 		}
 	}
