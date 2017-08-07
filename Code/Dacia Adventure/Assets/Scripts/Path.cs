@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Path : MonoBehaviour {
 
@@ -8,6 +9,7 @@ public class Path : MonoBehaviour {
 	public GameObject path1;
 	public float minSpeed;
 	public float maxSpeed;
+	public Text speedText;
 
 	public float speed;
 
@@ -22,6 +24,7 @@ public class Path : MonoBehaviour {
 	{
 		MovePaths ();
 		AcceleratePaths ();
+		UpdateSpeed ();
 	}
 
 	void MovePaths()
@@ -43,13 +46,18 @@ public class Path : MonoBehaviour {
 	{
 		if (Input.GetKey(KeyCode.W))
 		{
-			speed += 0.1f;
+			speed += 1.5f * Time.deltaTime;
 		}
 		if (Input.GetKey(KeyCode.S))
 		{
-			speed -= 0.1f;
+			speed -= 3f * Time.deltaTime;
 		}
 
 		speed = Mathf.Clamp (speed, minSpeed, maxSpeed);
+	}
+
+	void UpdateSpeed()
+	{
+		speedText.text = "Speed: " + (speed * 5).ToString("####") + "Km/h";
 	}
 }

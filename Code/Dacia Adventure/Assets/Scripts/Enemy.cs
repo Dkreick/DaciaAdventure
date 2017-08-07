@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour {
 
+	public Text carsAvoidedText;
+	public int carsAvoided;
 	public float speed;
 	public float timeToSpawn;
 	public float minTimeToSpawn;
@@ -12,8 +15,9 @@ public class Enemy : MonoBehaviour {
 
 	void Start () 
 	{
-		minTimeToSpawn = 0.5f;
-		maxTimeToSpawn = 2f;
+		carsAvoided = 0;
+		minTimeToSpawn = 1f;
+		maxTimeToSpawn = 3f;
 		timeToSpawn = Random.Range (minTimeToSpawn, maxTimeToSpawn);
 		speed = 10;
 		transform.position = new Vector3 (Random.Range (-1.7f, 1.7f), transform.position.y, transform.position.z);
@@ -27,7 +31,8 @@ public class Enemy : MonoBehaviour {
 		if (timeToSpawn < 0) 
 		{
 			SpawnEnemy ();
-			timeToSpawn = Random.Range (minTimeToSpawn, maxTimeToSpawn);;
+			timeToSpawn = Random.Range (minTimeToSpawn, maxTimeToSpawn);
+			DecrementTimeSpawn ();
 		}
 	}
 
@@ -44,6 +49,8 @@ public class Enemy : MonoBehaviour {
 			{
 				enemies[i].transform.position = new Vector3 (Random.Range (-1.7f, 1.7f), 8f, enemies[i].transform.localPosition.z);
 				enemies[i].SetActive (false);
+				carsAvoided++;
+				carsAvoidedText.text = "Cars avoided: " + carsAvoided;
 			}
 		}
 	}
@@ -59,6 +66,22 @@ public class Enemy : MonoBehaviour {
 				enemies[i].GetComponent<Renderer> ().material.color = randomColor;
 				return;
 			}
+		}
+	}
+
+	void DecrementTimeSpawn()
+	{
+		minTimeToSpawn -= 0.1f;
+		maxTimeToSpawn -= 0.1f;
+
+		if (minTimeToSpawn < 0.1f) 
+		{
+			minTimeToSpawn = 0.1f;
+		}
+
+		if (minTimeToSpawn < 0.25f) 
+		{
+			minTimeToSpawn = 0.25f;
 		}
 	}
 }
