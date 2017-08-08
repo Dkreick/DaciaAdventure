@@ -63,6 +63,6 @@ public class Player : MonoBehaviour {
 	void UpdateTravelDistance()
 	{
 		travelDistance += speed * 0.1f; 
-		travelDistanceText.text = "Distance traveled: " + travelDistance + "Mts";
+		travelDistanceText.text = "Distance\ntraveled: " + travelDistance + "Mts";
 	}
 }

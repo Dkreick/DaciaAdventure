@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: f3a53f20657606547950a07b44198a64
-timeCreated: 1501681838
+timeCreated: 1502215641
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -9,6 +9,7 @@ TextureImporter:
     21300004: PathSnow
     21300006: Dacia
     21300008: Lada
+    21300010: Ural
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -96,7 +97,7 @@ TextureImporter:
         width: 360
         height: 600
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -110,7 +111,7 @@ TextureImporter:
         width: 360
         height: 600
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -124,7 +125,7 @@ TextureImporter:
         width: 360
         height: 600
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -138,7 +139,7 @@ TextureImporter:
         width: 40
         height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -151,6 +152,20 @@ TextureImporter:
         y: 1937
         width: 45
         height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ural
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 1664
+        width: 101
+        height: 267
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

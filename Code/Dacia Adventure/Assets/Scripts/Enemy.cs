@@ -50,23 +50,31 @@ public class Enemy : MonoBehaviour {
 				enemies[i].transform.position = new Vector3 (Random.Range (-1.7f, 1.7f), 8f, enemies[i].transform.localPosition.z);
 				enemies[i].SetActive (false);
 				carsAvoided++;
-				carsAvoidedText.text = "Cars avoided: " + carsAvoided;
+				carsAvoidedText.text = "Cars\navoided: " + carsAvoided;
 			}
 		}
 	}
 
 	void SpawnEnemy()
 	{
-		for (int i = 0; i < enemies.Length; i++) 
+		do 
 		{
-			if (enemies[i].activeSelf == false) 
-			{
-				enemies[i].SetActive (true);
-				Color randomColor = new Color( Random.value, Random.value, Random.value, 1.0f);
-				enemies[i].GetComponent<Renderer> ().material.color = randomColor;
-				return;
-			}
-		}
+			int num = Random.Range (0, enemies.Length);
+			enemies[num].SetActive (true);
+			Color randomColor = new Color( Random.value, Random.value, Random.value, 1.0f);
+			enemies[num].GetComponent<Renderer> ().material.color = randomColor;
+			return;
+		}	while (enemies[num].activeSelf == false);
+//		for (int i = 0; i < enemies.Length; i++) 
+//		{
+//			if (enemies[i].activeSelf == false) 
+//			{
+//				enemies[i].SetActive (true);
+//				Color randomColor = new Color( Random.value, Random.value, Random.value, 1.0f);
+//				enemies[i].GetComponent<Renderer> ().material.color = randomColor;
+//				return;
+//			}
+//		}
 	}
 
 	void DecrementTimeSpawn()
