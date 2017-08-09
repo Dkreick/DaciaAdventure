@@ -57,24 +57,14 @@ public class Enemy : MonoBehaviour {
 
 	void SpawnEnemy()
 	{
+		int num = Random.Range (0, enemies.Length);
 		do 
 		{
-			int num = Random.Range (0, enemies.Length);
 			enemies[num].SetActive (true);
 			Color randomColor = new Color( Random.value, Random.value, Random.value, 1.0f);
 			enemies[num].GetComponent<Renderer> ().material.color = randomColor;
 			return;
 		}	while (enemies[num].activeSelf == false);
-//		for (int i = 0; i < enemies.Length; i++) 
-//		{
-//			if (enemies[i].activeSelf == false) 
-//			{
-//				enemies[i].SetActive (true);
-//				Color randomColor = new Color( Random.value, Random.value, Random.value, 1.0f);
-//				enemies[i].GetComponent<Renderer> ().material.color = randomColor;
-//				return;
-//			}
-//		}
 	}
 
 	void DecrementTimeSpawn()

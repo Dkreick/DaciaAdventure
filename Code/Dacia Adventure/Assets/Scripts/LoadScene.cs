@@ -7,6 +7,7 @@ public class LoadScene : MonoBehaviour
 {
 	public void ChangeScene(string scene)
 	{
+		Debug.Log ("Sarasa");
 		SceneManager.LoadScene (scene);
 	}
 }

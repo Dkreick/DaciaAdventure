@@ -8,10 +8,12 @@ public class Player : MonoBehaviour {
 	public float speed;
 	public float travelDistance;
 	public Text travelDistanceText;
+	public float rotateAngle;
 
 	void Start () 
 	{
 		travelDistance = 0;
+		rotateAngle = 30;
 		speed = 5;
 		Color randomColor = new Color( Random.value, Random.value, Random.value, 1.0f);
 		gameObject.GetComponent<Renderer> ().material.color = randomColor;
@@ -20,6 +22,7 @@ public class Player : MonoBehaviour {
 	void Update () 
 	{
 		MovePlayer();
+		RotatePlayer ();
 		ClampPlayer();
 		UpdateTravelDistance ();
 	}
@@ -42,6 +45,14 @@ public class Player : MonoBehaviour {
 		{
 			transform.Translate(Vector3.down * (speed * 2 * Time.deltaTime));
 		}
+	}
+
+	void RotatePlayer()
+	{
+		float zTurn = 0;
+		zTurn = Input.GetAxis ("Horizontal") * -rotateAngle;
+		transform.rotation = Quaternion.Euler (0, 0, zTurn);
+
 	}
 
 	void ClampPlayer ()
