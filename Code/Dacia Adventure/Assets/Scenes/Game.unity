@@ -1354,6 +1354,7 @@ MonoBehaviour:
   speed: 0
   travelDistance: 0
   travelDistanceText: {fileID: 1687682734}
+  rotateAngle: 0
 --- !u!212 &1795727642
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1387,7 +1388,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300006, guid: f3a53f20657606547950a07b44198a64, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.54901963, g: 0.64705884, b: 0.5921569, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

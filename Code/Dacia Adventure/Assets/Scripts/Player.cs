@@ -15,8 +15,6 @@ public class Player : MonoBehaviour {
 		travelDistance = 0;
 		rotateAngle = 30;
 		speed = 5;
-		Color randomColor = new Color( Random.value, Random.value, Random.value, 1.0f);
-		gameObject.GetComponent<Renderer> ().material.color = randomColor;
 	}
 		
 	void Update () 
@@ -59,7 +57,7 @@ public class Player : MonoBehaviour {
 	{
 		Vector3 clampedPosition = transform.position;
 		clampedPosition.x = Mathf.Clamp(transform.position.x, -2.4f, 2.4f);
-		clampedPosition.y = Mathf.Clamp(transform.position.y, -4f, 2.5f);
+		clampedPosition.y = Mathf.Clamp(transform.position.y, -4f, 0f);
 		transform.position = clampedPosition;
 	}
 
