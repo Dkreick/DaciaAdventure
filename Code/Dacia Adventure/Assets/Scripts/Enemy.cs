@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour {
 	public GameObject[] enemies = new GameObject[5];
 
 	void Start () 
-	{
+	{		
 		carsAvoided = 0;
 		minTimeToSpawn = 1f;
 		maxTimeToSpawn = 3f;
@@ -58,12 +58,16 @@ public class Enemy : MonoBehaviour {
 	void SpawnEnemy()
 	{
 		int num = Random.Range (0, enemies.Length);
+
 		do 
 		{
-			enemies[num].SetActive (true);
-			Color randomColor = new Color( Random.value, Random.value, Random.value, 1.0f);
-			enemies[num].GetComponent<Renderer> ().material.color = randomColor;
-			return;
+			if (enemies[num].activeSelf == false) 
+			{
+				enemies[num].SetActive (true);
+				Color randomColor = new Color( Random.value, Random.value, Random.value, 1.0f);
+				enemies[num].GetComponent<Renderer> ().material.color = randomColor;
+				return;
+			}
 		}	while (enemies[num].activeSelf == false);
 	}
 
@@ -72,14 +76,14 @@ public class Enemy : MonoBehaviour {
 		minTimeToSpawn -= 0.1f;
 		maxTimeToSpawn -= 0.1f;
 
-		if (minTimeToSpawn < 0.1f) 
-		{
-			minTimeToSpawn = 0.1f;
-		}
-
 		if (minTimeToSpawn < 0.25f) 
 		{
 			minTimeToSpawn = 0.25f;
+		}
+
+		if (maxTimeToSpawn < 0.50f) 
+		{
+			maxTimeToSpawn = 0.5f;
 		}
 	}
 }

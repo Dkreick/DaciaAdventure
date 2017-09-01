@@ -7,11 +7,11 @@ public class Path : MonoBehaviour {
 
 	public GameObject path0;
 	public GameObject path1;
+	public Text speedText;
 	public float minSpeed;
 	public float maxSpeed;
-	public Text speedText;
-
 	public float speed;
+	public float pathPositionReset = 4.6f;
 
 	void Start () 
 	{
@@ -22,9 +22,9 @@ public class Path : MonoBehaviour {
 	
 	void Update () 
 	{
+		speedText.text = "Speed: " + (speed * 5).ToString("####") + "Km/h";
 		MovePaths ();
 		AcceleratePaths ();
-		UpdateSpeed ();
 	}
 
 	void MovePaths()
@@ -34,11 +34,11 @@ public class Path : MonoBehaviour {
 
 		if (path0.transform.localPosition.y < -16f) 
 		{
-			path0.transform.localPosition = new Vector3 (path0.transform.localPosition.x, 4.8f, path0.transform.localPosition.z);
+			path0.transform.localPosition = new Vector3 (path0.transform.localPosition.x, pathPositionReset, path0.transform.localPosition.z);
 		}
 		if (path1.transform.localPosition.y < -16f) 
 		{
-			path1.transform.localPosition = new Vector3 (path1.transform.localPosition.x, 4.8f, path1.transform.localPosition.z);
+			path1.transform.localPosition = new Vector3 (path1.transform.localPosition.x, pathPositionReset, path1.transform.localPosition.z);
 		}
 	}
 
@@ -54,10 +54,5 @@ public class Path : MonoBehaviour {
 		}
 
 		speed = Mathf.Clamp (speed, minSpeed, maxSpeed);
-	}
-
-	void UpdateSpeed()
-	{
-		speedText.text = "Speed: " + (speed * 5).ToString("####") + "Km/h";
 	}
 }

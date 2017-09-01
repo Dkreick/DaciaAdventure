@@ -9,6 +9,5 @@ public class QuitGame : MonoBehaviour {
 		Application.Quit();
 		UnityEditor.EditorApplication.isPlaying = false;
 	}
-
 }
 

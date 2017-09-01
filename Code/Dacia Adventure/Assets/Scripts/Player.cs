@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour {
 
 	public float speed;
+	public float rotateAngle;
 	public float travelDistance;
 	public Text travelDistanceText;
-	public float rotateAngle;
 
 	void Start () 
 	{
@@ -72,6 +72,6 @@ public class Player : MonoBehaviour {
 	void UpdateTravelDistance()
 	{
 		travelDistance += speed * 0.1f; 
-		travelDistanceText.text = "Distance\ntraveled: " + travelDistance + "Mts";
+		travelDistanceText.text = "Distance\ntraveled: " + (int)travelDistance + "Mts";
 	}
 }

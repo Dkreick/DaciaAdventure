@@ -682,7 +682,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
@@ -888,10 +888,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   path0: {fileID: 1660308718}
   path1: {fileID: 1266014209}
+  speedText: {fileID: 692702289}
   minSpeed: 0
   maxSpeed: 0
-  speedText: {fileID: 692702289}
   speed: 0
+  pathPositionReset: 4.6
 --- !u!4 &885191191
 Transform:
   m_ObjectHideFlags: 0
@@ -1278,7 +1279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 20
+    m_Left: 50
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
@@ -1352,9 +1353,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  rotateAngle: 0
   travelDistance: 0
   travelDistanceText: {fileID: 1687682734}
-  rotateAngle: 0
 --- !u!212 &1795727642
 SpriteRenderer:
   m_ObjectHideFlags: 0
